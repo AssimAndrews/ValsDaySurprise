@@ -1,0 +1,136 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffe6f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+#app {
+    text-align: center;
+}
+
+.valentine-message h1 {
+    color: #ff6699;
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-in-out, pulse 1s infinite;
+}
+
+.typing-effect {
+    font-size: 1.5rem;
+    color: #ff3366;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.romantic-button {
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInButton 2s ease-in-out forwards;
+}
+
+.romantic-button:hover {
+    background-color: #ff6699;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hearts {
+    position: relative;
+    margin-top: 30px;
+    height: 100px;
+    width: 100px;
+    animation: floatHearts 3s infinite;
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff3366;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform-origin: center center;
+    animation: heartAnimation 2s infinite ease-in-out;
+}
+
+.heart:nth-child(1) {
+    left: 0;
+    animation-delay: 0.5s;
+}
+
+.heart:nth-child(2) {
+    left: 25px;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(3) {
+    left: 50px;
+    animation-delay: 1.5s;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
