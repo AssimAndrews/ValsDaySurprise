@@ -1,5 +1,5 @@
 const name = 'Sweetheart';
-const fullMessage = 'You are the sweetest person I have ever known. I am so incredibly blessed to have you in my life. Forever yours, my love. ❤️';
+const fullMessage = 'You are the sweetest person I have ever known. I am so incredibly blessed to have you in my life. Forever grateful. ❤️';
 
 const openButton = document.getElementById('openButton');
 const messageContainer = document.getElementById('messageContainer');
